@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laboration3.controller.Controller">
+   <children>
+      <Canvas fx:id="canvas" height="800.0"  onMouseClicked= "#placeOnCanvas" width="700.0" />
+      <ToolBar prefHeight="50.0" prefWidth="700.0">
+         <items>
+            <ColorPicker fx:id="colorPicker" prefHeight="25.0" prefWidth="100.0" onAction="#setColorPicker">
+               <value>
+                  <Color red="0.6240100860595703" green="0.43890106678009033" blue="0.7236841917037964" />
+               </value>
+            </ColorPicker>
+            <Button mnemonicParsing="false" onAction="#circleBtn" text="Circle" />
+            <Button mnemonicParsing="false" onAction="#squareBtn" text="Square" />
+            <Label text="Size" />
+            <Slider fx:id="slider" blockIncrement="100.0" majorTickUnit="100.0" max="500.0" min="10.0" prefHeight="38.0" prefWidth="205.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+            <ToggleButton fx:id="selectBtn" mnemonicParsing="false" onAction="#select" text="Select Shape" />
+            <Button mnemonicParsing="false" onAction="#undo" text="Undo" />
+            <Button mnemonicParsing="false" onAction="#save" text="Save" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
