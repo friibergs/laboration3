@@ -58,10 +58,6 @@ public class Controller {
     }
 
 
-//    public void setColorPicker(ColorPicker colorPicker) {
-//        this.colorPicker = colorPicker;
-//    }
-
     public void circleBtn() {
         defaultShape = CIRCLE;
     }

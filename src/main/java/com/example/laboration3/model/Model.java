@@ -14,7 +14,7 @@ public class Model {
 
     ObjectProperty<ShapeType> chosenShapeType = new SimpleObjectProperty<>();
     ObservableList<Shape> shapesObsList = FXCollections.observableArrayList();
-    ObjectProperty<Color> choseColor = new SimpleObjectProperty<>();
+    ObjectProperty<Color> choseColor = new SimpleObjectProperty<>(Color.PURPLE);
     DoubleProperty createXPosition = new SimpleDoubleProperty();
     DoubleProperty createYPosition = new SimpleDoubleProperty();
     DoubleProperty createSize = new SimpleDoubleProperty();
@@ -82,7 +82,7 @@ public class Model {
 
 
     public void selected(double xPosition, double yPosition) {
-        for (Shape s :
+         for (Shape s :
                 shapesObsList) {
             if (s.containing(xPosition, yPosition)) {
                 shapesObsList.remove(s);
@@ -96,7 +96,5 @@ public class Model {
         }
 
     }
-
-
 
 }
